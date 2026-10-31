@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "skill": "skill-crud",
+  "records": [
+    {
+      "id": "chat-workflow-default",
+      "title": "多聊天任务分配规则",
+      "type": "workflow",
+      "enabled": true,
+      "tags": [
+        "chat",
+        "workflow",
+        "development"
+      ],
+      "content": {
+        "test_chat_count": 2,
+        "test_chat_ids": [],
+        "progress_only_chat_ids": [],
+        "other_eligible_chats": "new_feature_development",
+        "continue_while_quota_nonzero": true,
+        "stop_conditions": [
+          "quota_zero",
+          "execution_interrupted",
+          "required_user_approval_missing",
+          "platform_or_safety_limit"
+        ],
+        "checkpoint_on_stop": true
+      },
+      "note": "由用户提供的默认工作流；执行前必须识别/指定测试聊天和只读进度聊天。"
+    }
+  ]
+}
